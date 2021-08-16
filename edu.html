@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookself</title>
+    <style>
+        a:link {
+
+            color:orange;
+        }
+
+        a:hover {
+            color: royalblue;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        a:visited {
+            color: springgreen;
+        }
+
+        .header1{
+            color: olivedrab;
+            font-family: cursive;
+        }
+        .header2{
+           color:lightseagreen;
+           font-family: cursive;
+        }
+        .container{
+            text-align: center;
+        }
+        .link{
+            list-style: none;
+        }
+
+        .navitem {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+
+        .btn {
+            padding: 4px;
+            border-radius: 7px;
+            cursor: pointer;
+            background-color: rgb(28, 83, 28);
+            color: white;
+            width: 55px;
+        }
+
+        .btn:hover {
+            background-color: darkorange;
+        }
+
+        .btn:active {
+            background-color: darkred;
+        }
+
+        #search {
+            width: 280px;
+            height: 30px;
+        }
+
+        #simg {
+            width: 30px;
+            ;
+            position: absolute;
+            cursor: pointer;
+            top: 1;
+            right: 16%;
+        }
+
+        a:link {
+            text-decoration: none;
+            color:teal;
+        }
+
+        a:hover {
+            color: royalblue;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        a:visited {
+            color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="navitem">
+            <div>
+                <li><a href="">
+                        Bookself
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="webpage.html">
+                        Home
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="about.html">
+                        About
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="edu.html">
+                        Educational content
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="Contact.html">
+                        Contact us
+                    </a></li>
+            </div>
+            <div>
+                <a onclick="go()" href=""><img id="simg" src="search.png" width="50px" height="30px"></a>
+                <input type="search" id="search" placeholder="Serach for books,career and more">
+            </div>
+            <div>
+                <button class="btn" onclick="login()"> Login</button>
+                <button class="btn" onclick="account()">Signup</button>
+            </div>
+        </ul>
+    </div>
+    <div class="container">
+        <h1 class="header1">Here you can access data of differnet books and concepts</h1>
+        <br>
+            <div class="pdf">
+                <h2 class="header2">Find the pdf and invest on learning</h2>
+                <br>
+                <ul>
+                    <li class="link"><a href="sem1.pdf">Semester 1</a></li>
+                    <br>
+                    <li class="link"><a href="sem2.pdf">Semester 2</a></li>
+                    <br>
+                    <li class="link"><a href="sem3.pdf">Semester 3</a></li>
+                    <br>
+                    <li class="link"><a href="sem4.pdf">Semester 4</a></li>
+                    <br>
+                    <li class="link"><a href="sem5.pdf">Semester 5</a></li>
+                    <br>
+                    <li class="link"><a href="sem6.pdf">Semester 6</a></li>
+                    <br>
+                    <li class="link"><a href="project.pdf">Porjects</a></li>
+                    <br>
+                    <li class="link"><a href="Miner Project presentation.pptx">Porject presentation</a></li>
+                    <br>
+                    <li class="link"><a href="thesis.pdf">Thesis</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function go() {
+            alert("Serach modeule is comming soon");
+        }
+        function login() {
+            window.location.href = "login.html";
+        }
+
+        function account() {
+            window.location.href = "createaccount.html";
+        }
+    </script>
+</body>
+</html>

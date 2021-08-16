@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style>
+
+       #header{
+         text-align: center;
+         font-size: 4vw;
+         font-family: cursive;
+       }
+
+       #head{
+         text-align: center;
+         font-size: 2.5vw;
+         font-style: italic;
+         color: skyblue;
+       }
+
+       .name{
+         position: absolute;
+         top: 40%;
+         left: 22%;
+       }
+
+      .date{
+        position: absolute;
+        top: 40%;
+        left: 72%;
+      }
+
+      .cost{
+        position: absolute;
+        top: 50%;
+        left: 22%;
+      }
+
+      .name1{
+        position: absolute;
+        top: 41%;
+        left: 11%;
+      }
+
+     .date1{
+       position: absolute;
+       top: 41%;
+       left: 55%;
+     }
+
+     .cost1{
+       position: absolute;
+       top: 51%;
+       left: 10%;
+     }
+
+
+     .btn1{
+       position: absolute;
+       top: 60%;
+       left: 40%;
+     }
+
+     .btn2{
+       position: absolute;
+       top: 60%;
+       left: 60%;
+     }
+
+      .btn{
+        border-radius: 15px;
+        width: 100px;
+        height: 35px;
+        text-align: center;
+        background-color: green;
+        color: white;
+        border:  none;
+        cursor: pointer;
+      }
+
+      .btn:hover{
+        background-color: orange;
+        padding-left: 1%;
+      }
+
+      .btn:active{
+        background-color: red;
+      }
+
+      .label{
+        font-size: 23px;
+        font-family: sans-serif;
+      }
+
+      .label:hover{
+        padding-left: 1%;
+        color: #006699;
+      }
+
+      .input{
+        width: 250px;
+        height: 30px;
+        text-align: center;
+      }
+
+      .input:hover{
+       padding-left: 1%;
+      }
+
+      .table{
+
+      }
+
+      #tabb{
+        border: 2px solid black;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding: auto;
+        display: inline-table;
+        justify-content: space-between;
+      }
+
+      #table{
+       border: 2px solid black;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding: auto;
+        display: inline-table;
+        justify-content: space-between;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <h1 id="header">Expanse Tracker</h1>
+      <h2 id="head" >Add A New Item:</h2>
+      <br><br>
+      <label class="label name1 " for="">Item Name:</label>
+      <input class="input name" id="naam" type="text" placeholder="Enter the name of the item">
+      <br><br>
+      <label  class="label date1" for="">Date of purchasing:</label>
+      <input class="input date" id="dinank" type="date" placeholder="Enter the date of purchasing">
+      <br><br>
+      <label  class="label cost1" for="">Cost of Item:</label>
+      <input class="input cost" id="paisa" type="text" placeholder="Enter the amount of the item">
+      <br><br>
+      <button class="btn1 btn" onclick="add()">Add Expanse</button>
+      <button class="btn2 btn" onclick="Remove()">Remove Expanse</button>
+      <br> <br><br><br><br> <hr>
+      <div class="con">
+        <table id="tabb">
+          <tr>
+            <th>Item Name</th>
+            <th>Date of purchasing</th>
+            <th>Cost of item</th>
+          </tr>
+
+          <table id="table">
+
+          </table>
+        </table>
+
+      </div>
+    </div>
+
+    <script>
+
+        function add(){
+
+          // This section is for getting the value's of input fields
+
+          let a=document.querySelector('#naam').value;
+          let b=document.querySelector('#dinank').value;
+          let c=document.querySelector('#paisa').value;
+
+          // This section is for getting inputfield clear after submit
+
+          document.querySelector('#naam').value="";
+          document.querySelector('#dinank').value="";
+          document.querySelector('#paisa').value="";
+
+              // creating table rows and column
+
+          let t=document.getElementById('table');
+          let row=t.insertRow(0);
+          let c1=row.insertCell(0);
+          let c2=row.insertCell(1);
+          let c3=row.insertCell(2);
+          c1.innerHTML=a;
+          c2.innerHTML=b;
+          c3.innerHTML=c;
+
+        }
+
+        function Remove(){
+          document.getElementById('table').deleteRow(0);
+        }
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Grades calculator</title>
+
+  <style media>
+body{
+  background-color:rgb(105, 67, 67);
+}
+
+    .container {
+      margin: auto;
+      text-align: center;
+      padding: 10x;
+      height: 550px;
+      width: 780px;
+      background-color: #2b292a;
+      position: absolute;
+      top: 10%;
+      left: 20%;
+      border-radius: 30px;
+      box-shadow: 60% royalblue;
+      box-shadow: 5px 5px 5px 5px red;;
+
+    }
+
+    #btn {
+      background-color: darkgreen;
+      padding: 5px;
+      border-radius: 10px;
+      border: none;
+
+    }
+
+    #btn:hover {
+      background-color: orange;
+    }
+
+    #btn:active {
+      background-color: red;
+    }
+
+    .subject {
+      width: 120px;
+      background-color: slateblue;
+      color: powderblue
+    }
+
+    .header {
+      font-family: 'Courier New', Courier, monospace;
+      color: teal
+    }
+
+    .para {
+      font-family: fantasy;
+      color: slategrey;
+      font-size: 20px;
+    }
+
+    .input {
+      background-color: silver;
+      text-align: center;
+    }
+
+    #percentage{
+      font-family: cursive;
+      font-size: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="header">This page for the students to calculate their percentage</h1>
+    <br>
+    <p class="para">Please select your respected subjects and start calculating</p>
+    <br><br><br>
+    <select name="subject" class="subject">
+      <option value="subject">subject</option>
+      <option value="English">IT</option>
+      <option value="Hindi">Hindi</option>
+      <option value="Maths">Maths</option>
+      <option value="Science">Political science</option>
+    </select>
+    <input class="input first" type="text" placeholder="Enter your marks">
+    <br><br>
+    <select name="subject" class="subject">
+      <option value="subject">subject</option>
+      <option value="English">physics</option>
+      <option value="Hindi">Accountancy</option>
+      <option value="Maths">Sociology</option>
+      <option value="Science">Science</option>
+    </select>
+    <input class="input second" type="text" placeholder="Enter your marks">
+    <br><br>
+    <select name="subject" class="subject">
+      <option value="subject">subject</option>
+      <option value="English">Chemsitry</option>
+      <option value="Hindi">Business</option>
+      <option value="Maths">History</option>
+      <option value="Science">Social Science</option>
+    </select>
+    <input class="input third" type="text" placeholder="Enter your marks">
+    <br><br>
+    <select name="subject" class="subject">
+      <option value="subject">subject</option>
+      <option value="English">CS</option>
+      <option value="Hindi">Ecomomics</option>
+      <option value="Maths">Hindi</option>
+      <option value="Science">Geography</option>
+    </select>
+    <input class="input forth" type="text" placeholder="Enter your marks">
+    <br><br>
+    <select name="subject" class="subject">
+      <option value="subject">subject</option>
+      <option value="English">English</option>
+    </select>
+    <input class="input fifth" type="text" placeholder="Enter your marks">
+    <br><br>
+    <button onclick="calculate()" id="btn">calculate</button>
+    <div class="con">
+      <p id="percentage" style="color:white"></p>
+    </div>
+
+  </div>
+
+
+  <script>
+
+
+    function calculate() {
+      let a = parseInt(document.querySelector('.first').value)
+      let b = parseInt(document.querySelector('.second').value)
+      let c = parseInt(document.querySelector('.third').value)
+      let d = parseInt(document.querySelector('.forth').value)
+      let e = parseInt(document.querySelector('.fifth').value)
+
+      let sum = a + b + c + d + e;
+      let percentage = (sum * 100) / 500;
+
+      if (percentage >= 75 && percentage <= 100) {
+        var result = ("congratulations you passed with flyiing colors")
+      }
+      else if (percentage >= 30) {
+        var result = ("congratualations you passed hit harder next time")
+      } else if (percentage >= 35 && percentage <= 1) {
+        var result = ("Sorry you fail but remember failure is the first step of success")
+      } else {
+        var result = ("invalid percentage")
+      }
+
+      let z = document.getElementById('percentage').innerHTML = result + " And your percentage is:" + percentage+"%"
+
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookself</title>
+    <style>
+         .navitem {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+
+        .btn {
+            padding: 4px;
+            border-radius: 7px;
+            cursor: pointer;
+            background-color: rgb(28, 83, 28);
+            color: white;
+            width: 55px;
+        }
+
+        .btn:hover {
+            background-color: darkorange;
+        }
+
+        .btn:active {
+            background-color: darkred;
+        }
+
+        #search {
+            width: 280px;
+            height: 30px;
+        }
+
+        #simg {
+            width: 30px;
+            ;
+            position: absolute;
+            cursor: pointer;
+            top: 1;
+            right: 16%;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: burlywood;
+        }
+
+        a:hover {
+            color: royalblue;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        a:visited {
+            color: springgreen;
+        }
+
+        .footer {
+            position: absolute;
+            top: 1150px;
+            right: 600px;
+        }
+
+        .card1{
+            display: grid;
+            grid-template-columns: 950px 300px;
+        }
+
+        .card2{
+            display: grid;
+            grid-template-columns: 950px 300px;
+        }
+
+        .card3{
+            display: grid;
+            grid-template-columns: 950px 300px;
+        }
+        .img{
+            box-shadow: 2px 2px 2px 2px red;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="navitem">
+            <div>
+                <li><a href="">
+                        Bookself
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="webpage.html">
+                        Home
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="about.html">
+                        About
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="edu.html">
+                        Educational content
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="Contact.html">
+                        Contact us
+                    </a></li>
+            </div>
+            <div>
+                <a onclick="go()" href=""><img id="simg" src="search.png" width="50px" height="30px"></a>
+                <input type="search" id="search" placeholder="Serach for books,career and more">
+            </div>
+            <div>
+                <button class="btn" onclick="login()"> Login</button>
+                <button class="btn" onclick="account()">Signup</button>
+            </div>
+        </ul>
+
+    </div>
+
+    <div class="card1">
+         <div class="text">
+             <h2>This website help you to tackle to problem which a student face:</h2>
+             <ul>
+                 <li>To a student its hard to find every thing on a single place and we do it</li>
+                 <li>We provide you with different tools and suggestions for a good practice</li>
+                 <li>We encrouge the student with the interactive website to grow and achive heights</li>
+             </ul>
+         </div>
+         <div class="img"><img class="img" src="form.jpg" alt="not found" width="300px" height="300px"></div>
+    </div>
+    <br><br>
+    <div class="card2">
+        <div class="text1">
+           <h1>What we provide on our website?</h1>
+           <ul>
+           <li>Here we have a calculator do calculate percentage</li>
+           <li>Here we have Educational content and a running watch</li>
+           <li>Here we provide todolist and expence calculator</li>
+        </ul>
+        </div>
+        <div class="img1"><img class="img" src="img2.jpg" alt="not found" width="300px" height="300px"></div>
+    </div>
+    <br><br>
+    <div class="card3">
+        <div class="text2">
+           <h1>What are our future plans?</h1>
+           <ul>
+               <li>We will foucus to make our website more efficent and intractive</li>
+               <li>We will foucus on making the webiste responsive even for a very small device</li>
+               <li>We will add some more tools and functionality</li>
+               ;<i>We will look forward for video lectures too</i>
+           </ul>
+        </div>
+      <div class="img2"><img class="img" src="im.jpg" alt="not found" width="300px" height="300px"></div>
+    </div>
+    <div class="footer">
+        <p>&copy; Bookself Pvt. Ltd.</p>
+        <p>contact us for more details</p>
+        <br><br>
+    </div>
+
+    <script>
+        function go(){
+            alert("Serach modeule is comming soon");
+        }
+        function login() {
+            window.location.href = "login.html";
+        }
+
+        function account() {
+            window.location.href = "createaccount.html";
+        }
+    </script>
+</body>
+</html>

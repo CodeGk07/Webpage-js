@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookself</title>
+    <style>
+        body {
+            background-image: url(main2.jpg);
+            background-size: 1200px;
+        }
+
+        .container2 {
+            position: absolute;
+            top: 25%;
+            right: 37%;
+            background-color: darkolivegreen;
+            text-align: center;
+            padding: 10px;
+            height: 300px;
+            width: 300px;
+            display: none;
+        }
+
+        .container {
+            background-color: aliceblue;
+            background-image: url(page2.jpg);
+            background-size: 400px;
+            height: 450px;
+            width: 350px;
+            margin: 5px;
+            padding: 5px;
+            text-align: center;
+            position: absolute;
+            top: 15%;
+            right: 35%;
+            box-shadow: 2px 2px 5px 5px grey;
+
+        }
+
+        .container:hover {
+            padding-top: 23px;
+        }
+
+        .btn {
+            padding: 4px;
+            border-radius: 7px;
+            cursor: pointer;
+            background-color: rgb(28, 83, 28);
+            color: white;
+            width: 55px;
+        }
+
+        .btn:hover {
+            background-color: darkorange;
+        }
+
+        .btn:active {
+            background-color: darkred;
+        }
+
+        .text {
+            font-family: cursive;
+            color: white;
+        }
+
+        .para {
+            color: white;
+        }
+
+        #header {
+            font-family: monospace;
+            font-size: 20px;
+            color: white;
+
+        }
+
+        span {
+            color: teal;
+            cursor: pointer;
+        }
+
+        .link {
+            color: white;
+            text-decoration: none;
+        }
+        .navitem {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+
+        .btn {
+            padding: 4px;
+            border-radius: 7px;
+            cursor: pointer;
+            background-color: rgb(28, 83, 28);
+            color: white;
+            width: 55px;
+        }
+
+        .btn:hover {
+            background-color: darkorange;
+        }
+
+        .btn:active {
+            background-color: darkred;
+        }
+
+        #search {
+            width: 280px;
+            height: 30px;
+        }
+
+        #simg {
+            width: 30px;
+            ;
+            position: absolute;
+            cursor: pointer;
+            top: 1;
+            right: 16%;
+        }
+
+        a:link {
+            text-decoration: none;
+            color:teal;
+        }
+
+        a:hover {
+            color: royalblue;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        a:visited {
+            color: springgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="navitem">
+            <div>
+                <li><a href="">
+                        Bookself
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="webpage.html">
+                        Home
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="about.html">
+                        About
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="edu.html">
+                        Educational content
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="Contact.html">
+                        Contact us
+                    </a></li>
+            </div>
+            <div>
+                <a onclick="go()" href=""><img id="simg" src="search.png" width="50px" height="30px"></a>
+                <input type="search" id="search" placeholder="Serach for books,career and more">
+            </div>
+            <div>
+                <button class="btn" onclick="login()"> Login</button>
+                <button class="btn" onclick="account()">Signup</button>
+            </div>
+        </ul>
+    </div>
+    <div class="container">
+        <h2 id="header">Enter your details to create account</h2>
+        <br>
+        &nbsp;&nbsp;&nbsp;<label class="text" for="name">First name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
+            id="input1" type="text" placeholder="Enter your First name">
+        <br><br>
+        &nbsp;&nbsp;&nbsp;<label class="text" for="name">Last name</label>&nbsp;&nbsp;&nbsp;&nbsp; <input id="input2"
+            type="text" placeholder="Enter your Last name">
+        <br><br>
+        &nbsp;&nbsp;&nbsp;<label class="text" for="mail">Email</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
+            id="input3" type="text" placeholder="Enter a email">
+        <br><br>
+        &nbsp;&nbsp;&nbsp;<label class="text" for="password">Password</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
+            id="input4" type="password" placeholder="select a password">
+        <br><br>
+        <label class="text" for="password">Confirm password</label> &nbsp; <input id="input5" type="password"
+            placeholder="Confirm password">
+        <br><br>
+        <input id="input6" type="checkbox">&nbsp; <label class="text" for="check"> Enroll to
+            <span>Bookself</span></label>
+        <br><br>
+       
+        <button class="btn" onclick="create()">Next</button>&nbsp; <button onclick="login()" class="btn">Cancel</button>
+        <hr>
+        <h4 class="para">By creating an account you agree to our <span>Term of Sevice</span> and <span>privacy
+                policy</span></h4>
+    </div>
+    <div class="container2">
+        <img src="love.ico" alt="" width="60px">
+        <br>
+        <h2>You created an account now go to the login page</h2>
+        <br>
+        <button class="btn" onclick="login()">Next</button>
+    </div>
+    <div></div>
+    <script>
+        function create() {
+            let a = document.getElementById('input1').value;
+            let b = document.getElementById('input2').value;
+            let c = document.getElementById('input3').value;
+            let d = document.getElementById('input4').value;
+            let e = document.getElementById('input5').value;
+            let f = document.getElementById('input6').value;
+
+           if (a.length==0||b.length==0||c.length==0||d.length==0||e.length==0) {
+               alert("Please fill the complete details first to creat an account")
+           }
+            else {
+
+                let b = document.querySelector('.container2');
+                b.style.display = "block";
+            }
+
+
+        }
+        function login() {
+            let a = document.querySelector('.container2');
+            a.style.display = "none";
+            window.location.href = "login.html";
+        }
+        function go() {
+            alert("Serach modeule is comming soon");
+        }
+        function login() {
+            window.location.href = "login.html";
+        }
+
+        function account() {
+            window.location.href = "createaccount.html";
+        }
+    </script>
+</body>
+
+</html>

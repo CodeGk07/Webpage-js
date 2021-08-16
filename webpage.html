@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookself</title>
+    <style>
+        .navitem {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+
+        .btn {
+            padding: 4px;
+            border-radius: 7px;
+            cursor: pointer;
+            background-color: rgb(28, 83, 28);
+            color: white;
+            width: 55px;
+        }
+
+        .btn:hover {
+            background-color: darkorange;
+        }
+
+        .btn:active {
+            background-color: darkred;
+        }
+
+        #search {
+            width: 280px;
+            height: 30px;
+        }
+
+        #simg {
+            width: 30px;
+            ;
+            position: absolute;
+            cursor: pointer;
+            top: 1;
+            right: 16%;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: burlywood;
+        }
+
+        a:hover {
+            color: royalblue;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        a:visited {
+            color: springgreen;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            padding: 5px;
+            width: 520px;
+            height: 350px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid1 {
+            background-color: grey;
+            box-shadow: 2px 2px 5px 5px rgb(46, 6, 6);
+            position: absolute;
+            top: 620px;
+            right: 750px;
+        }
+
+        .grid2 {
+            background-color: gray;
+            box-shadow: 2px 2px 5px 5px rgb(46, 6, 6);
+            position: absolute;
+            top: 620px;
+            right: 100px;
+        }
+
+        .grid3 {
+            background-color: slategray;
+            box-shadow: 2px 2px 5px 5px rgb(46, 6, 6);
+            position: absolute;
+            top: 1020px;
+            right: 750px;
+        }
+
+        .grid4 {
+            background-color: silver;
+            box-shadow: 2px 2px 5px 5px rgb(46, 6, 6);
+            position: absolute;
+            top: 1020px;
+            right: 100px;
+        }
+
+        .grid5 {
+            background-color: rgb(187, 164, 164);
+            box-shadow: 2px 2px 5px 5px rgb(46, 6, 6);
+            position: absolute;
+            top: 1420px;
+            right: 750px;
+        }
+
+        .grid6 {
+            background-color: rgb(192, 214, 231);
+            box-shadow: 2px 2px 5px 5px rgb(46, 6, 6);
+            position: absolute;
+            top: 1420px;
+            right: 100px;
+        }
+
+        .footer {
+            position: absolute;
+            top: 1850px;
+            right: 600px;
+        }
+
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1300px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="navitem">
+            <div>
+                <li><a href="">
+                        Bookself
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="webpage.html">
+                        Home
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="about.html">
+                        About
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="edu.html">
+                        Educational content
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="Contact.html">
+                        Contact us
+                    </a></li>
+            </div>
+            <div>
+                <a onclick="go()" href=""><img id="simg" src="search.png" width="50px" height="30px"></a>
+                <input type="search" id="search" placeholder="Serach for books,career and more">
+            </div>
+            <div>
+                <button class="btn" onclick="login1()"> Login</button>
+                <button class="btn" onclick="account()">Signup</button>
+            </div>
+        </ul>
+
+    </div>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="img3.jpg" style="width:1350px" height="500px;">
+            <div class="text">Do It Now</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img2.jpg" style="width:1350px" height="500px;">
+            <div class="text">Dont stop till you achive it</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img1.jpg" style="width:1350px" height="500px;">
+            <div class="text">Procastinations are invalid</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <div class="grid grid1">
+        <div class="griditem">
+            <h3>Select you carrer wisely,So here we are with you</h3>
+            <br>
+            <ul>
+                <li>We will tell you about the career options you have</li>
+                <li>We will tell you what is best according to your intrest</li>
+                <li>We will help you to achieve heights in your career</li>
+                <li>We can help you to increase your intrest in you subjects</li>
+            </ul>
+
+            <center><button onclick="career()" class="btn">Check</button></center>
+        </div>
+        <div class="gridimg">
+            <img src="career.jpg" alt="NOt found" width="250px" height="300px;">
+        </div>
+    </div>
+
+    <div class="grid grid2">
+        <div class="griditem">
+            <h3>Here you can get some Educational contect in pdf form</h3>
+            <br>
+            <ul>
+                <li>It can work as a onlibe library for you </li>
+                <li>You can find here the contect that you need</li>
+                <li>You can read them online and can download them</li>
+                <li>There is no restriction on the data you can access content</li>
+            </ul>
+
+            <center><button onclick="edu()" class="btn">Check</button></center>
+        </div>
+        <div class="gridimg">
+            <img src="study.jpg" alt="NOt found" width="250px" height="300px;">
+        </div>
+    </div>
+
+    <div class="grid grid3">
+        <div class="griditem">
+            <h3>Calculate your pecentage</h3>
+            <br>
+            <ul>
+                <li>No need to go to anywhere to Check you percentage</li>
+                <li>It will help you to know which field you can apply for</li>
+                <li>Their is everysubject is present so that you can calculate accordingly</li>
+                <li>Its easy to use and user friendly</li>
+            </ul>
+
+            <center><button onclick="percentage()" class="btn">Check</button></center>
+        </div>
+        <div class="gridimg">
+            <img src="percentage.jpg" alt="NOt found" width="250px" height="300px;">
+        </div>
+    </div>
+
+    <div class="grid grid4">
+        <div class="griditem">
+            <h3>Keep yourself upto date</h3>
+            <br>
+            <ul>
+                <li>Here you can check the date</li>
+                <li>You can check time here too</li>
+                <li>The time and date is accurate</li>
+                <li>Digital time and date easy to read even by the childrens</li>
+            </ul>
+
+            <center><button onclick="time()" class="btn">Check</button></center>
+        </div>
+        <div class="gridimg">
+            <img src="time.jpg" alt="NOt found" width="250px" height="300px;">
+        </div>
+    </div>
+
+    <div class="grid grid5">
+        <div class="griditem">
+            <h3>Expense Calcultor</h3>
+            <br>
+            <ul>
+                <li>Its easy to know your Expenses and you can do it here</li>
+                <li>It is user friendly and easy to use</li>
+                <li>You can track your expnace with date and cost</li>
+                <li>Clear the expense that you want to clear</li>
+            </ul>
+
+            <center><button onclick="expense()" class="btn">Check</button></center>
+        </div>
+        <div class="gridimg">
+            <img src="expense.jpg" alt="NOt found" width="250px" height="300px;">
+        </div>
+        <br><br><br><br>
+    </div>
+
+    <div class="grid grid6">
+        <div class="griditem">
+            <h3>To do list</h3>
+            <br>
+            <ul>
+                <li>Its important to have a set goal</li>
+                <li>You can add multiple goal here</li>
+                <li>You can clear the list when tasks are completed</li>
+                <li>Its user friendly and easy to use</li>
+            </ul>
+
+            <center><button onclick="todo()" class="btn">Check</button></center>
+        </div>
+        <div class="gridimg">
+            <img src="todo.jpg" alt="NOt found" width="250px" height="300px;">
+            <br><br><br><br>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; Bookself Pvt. Ltd.</p>
+        <p>contact us for more details</p>
+        <br><br>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        function login1() {
+            window.location.href = "login.html";
+        }
+
+        function account() {
+            window.location.href = "createaccount.html";
+        }
+
+        function go() {
+            alert("Serach modeule is comming soon");
+        }
+        function career() {
+            window.location.href = "career.html";
+        }
+        function time() {
+            window.location.href = "timeanddate.html";
+        }
+        function percentage() {
+            window.location.href = "percentage.html";
+        }
+        function todo() {
+            window.location.href = "to-do-list.html";
+        }
+        function expense() {
+            window.location.href = "expense.html";
+        }
+        function edu() {
+            window.location.href = "edu.html";
+        }
+    </script>
+</body>
+
+</html>

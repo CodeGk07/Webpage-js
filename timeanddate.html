@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Date and time</title>
+  </head>
+  <body>
+      <h1>This is the page where you can see date and time</h1>
+      <p>Update your self with date</p>
+      <p id="date"></p>
+      <p>keep your eye on time</p>
+      <p id="time"></p>
+
+      <button onclick="stop()">stop time</button>
+      <script>
+        var a=setInterval(start,1000);
+        function start(){
+          let b=new Date();
+          let d=b.toLocaleDateString();
+          document.getElementById('date').innerHTML=d;
+
+          let t=b.toLocaleTimeString();
+          document.getElementById('time').innerHTML=t;
+        }
+
+        function stop(){
+          clearInterval(a);
+        }
+
+        var a=setTimeout(run,2000);
+        function run(){
+          alert("This in which you can see timeout and timeinterval");
+        }
+      </script>
+  </body>
+</html>

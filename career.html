@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+
+<body>
+    <center>
+        <h1>You can select your carriers options here:</h1>
+        <p>Just select you branch and you can go with carrer options</p>
+        <select id="select">
+            <option value="Branch">Branch</option>
+            <option value="CSE">CSE</option>
+            <option value="Civil">Civil</option>
+            <option value="IT">IT</option>
+            <option value="Mechnical">Mechnical</option>
+            <option value="Electronics">Electronics</option>
+        </select>
+        <p>Below are your career options according to your branch</p>
+        <br>
+        <p id="print"></p>
+        <br>
+        <button id="btn" onclick="move()">click</button>
+    </center>
+
+    <script>
+    
+        function move() {
+            let a = document.getElementById("select").value;
+         
+            if (a=="CSE") {
+                const cse = ["Web Developers", "Software Developers", "Database Developer", "Software Quality Assurance", "Testing"];
+                let cs = "";
+                for (i = 0; i < cse.length; i++) {
+                    cs = cs + cse[i] + "<br>"
+                }
+                document.querySelector('#print').innerHTML = cs;
+            }
+            else if (a=="Civil") {
+                const civil=["Geotechnical engineer","Environmental engineer","Public Health engineer","Transportation engineer","Urban planning engineer"];
+                let civ = "";
+                for (i = 0; i < civil.length; i++) {
+                    civ = civ + civil[i] + "<br>"
+                }
+                document.querySelector('#print').innerHTML = civ;
+            }
+            else if (a=="IT") {
+                const It = ["Network Administrator", "Computer Support Specialist", "Data Security Administrator", "Database Administrator", "System Administrator"];
+                let it = "";
+                for (i = 0; i < It.length; i++) {
+                    it = it + It[i] + "<br>"
+                }
+                document.querySelector('#print').innerHTML = it;
+            }
+            else if (a =="Mechnical") {
+                const mech = ["Maintenance Engineer", "Automotive Engineer", "Control and Instrumentation Engineer", "Nuclear Engineer", "Contracting Civil Engineer"];
+                let mec = "";
+                for (i = 0; i < mech.length; i++) {
+                    mec = mec + mech[i] + "<br>"
+                }
+                document.querySelector('#print').innerHTML = mec;
+            }
+            else if (a=="Electronics") {
+                const Elex = ["Communications Engineer.", "Network Planning Engineer", "Desktop Support Enginee", "Technical Director", "Field Test Engineer"];
+                let ele = "";
+                for (i = 0; i < Elex.length; i++) {
+                    ele = ele + Elex[i] + "<br>"
+                }
+                document.querySelector('#print').innerHTML = ele;
+            }
+            else{
+                document.querySelector('#print').innerHTML="Choose correct branch";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

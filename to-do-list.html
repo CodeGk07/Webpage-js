@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style >
+     #header{
+       color:#ff3333;
+       font-size:4vw;
+       font-style:italic;
+     }
+
+    .container{
+      border:2px solid black;
+      width:1100px;
+      height:200px;
+      display:flex;
+      margin:auto;
+      justify-content:center;
+      border-radius:80px;
+      background-color:#0066ff;
+      box-shadow: 10px 10px 10px 10px ;
+    }
+
+    #head{
+      color:#ff0000;
+      font-size:3vw;
+      font-style:italic;
+    }
+
+    #input{
+      width:400px;
+      height:30px;
+      padding:5px;
+      text-align:center;
+      border-radius:30px;
+      border:none;
+    }
+
+   #btn{
+     background-color:#339933;
+     padding:5px;
+     border-radius:10px;
+     color:white;
+     border:none;
+     cursor:pointer;
+     height:30px;
+   }
+
+   #btn:hover{
+     background-color:orange;
+   }
+
+   #btn2:hover{
+     background-color:orange;
+   }
+
+   #btn2{
+     background-color:#339933;
+     padding:5px;
+     border-radius:10px;
+     color:white;
+     border:none;
+     cursor:pointer;
+     height:30px;
+   }
+
+   .con{
+     border:2px solid black;
+     width:1100px;
+     height:550px;
+     margin:auto;
+     text-align:center;
+     border-radius:80px;
+     box-shadow: 10px 10px 10px 10px;
+     font-size:30px;
+     position: absolute;
+     top:58%;
+   }
+
+
+
+    </style>
+  </head>
+  <body>
+    <center><h1 id="header">This is your to do list</h1></center>
+    <br><br>
+    <div class="container">
+      <center><h2 id="head">To-Do-List</h2>
+      <br>
+      <input id="input" type="text" placeholder="Enter your task and try to complete it">
+      <button id="btn" onclick="work()">Add Task</button>
+      <button id="btn2" onclick="cleen()">Clear List</button></center>
+      <br>
+
+    <br>
+    <div class="con">
+
+    </div>
+   </div>
+  <script>
+
+    function work(){
+    // getting the value through input box
+  var a=document.getElementById('input').value;
+
+  // to get input field empty after taking value
+  document.getElementById('input').value="";
+
+  // creating para to store value
+  var b=document.createElement('li');
+  // inputing value of input field into para and giving class to it
+  b.innerHTML=a;
+  b.className="para";
+  // giving value thorugh appendChild
+  var c=document.querySelector('.con');
+  c.appendChild(b);
+
+
+
+
+}
+
+ // function to clear all the task added
+function cleen(){
+  document.querySelector('.con').innerHTML="";
+
+}
+
+
+  </script>
+
+  </body>
+</html>

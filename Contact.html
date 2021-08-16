@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookself</title>
+    <style>
+        .navitem {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+
+        .btn {
+            padding: 4px;
+            border-radius: 7px;
+            cursor: pointer;
+            background-color: rgb(28, 83, 28);
+            color: white;
+            width: 55px;
+        }
+
+        .btn:hover {
+            background-color: darkorange;
+        }
+
+        .btn:active {
+            background-color: darkred;
+        }
+
+        #search {
+            width: 280px;
+            height: 30px;
+        }
+
+        #simg {
+            width: 30px;
+            ;
+            position: absolute;
+            cursor: pointer;
+            top: 1;
+            right: 16%;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: burlywood;
+        }
+
+        a:hover {
+            color: royalblue;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        a:visited {
+            color: springgreen;
+        }
+
+       
+
+        .container1 {
+            background-color: rgb(69, 133, 69);
+            text-align:center;
+            position: absolute;
+            top: 80px;
+            width: 527px;
+            box-shadow:khaki 2px 2px 2px 2px;
+        }
+
+        .container2 {
+            background-image: url(about.jpg);
+            background-size: 410px;
+            text-align: center;
+            position: absolute;
+            top: 80px;
+            list-style: none;
+            right: 1%;
+            width: 800px;
+            height: 545px;
+        }
+
+        .footer {
+            position: absolute;
+            top: 650px;
+            right: 600px;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="navitem">
+            <div>
+                <li><a href="">
+                        Bookself
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="webpage.html">
+                        Home
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="about.html">
+                        About
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="edu.html">
+                        Educational content
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="Contact.html">
+                        Contact us
+                    </a></li>
+            </div>
+            <div>
+                <a onclick="go()" href=""><img id="simg" src="search.png" width="50px" height="30px"></a>
+                <input type="search" id="search" placeholder="Serach for books,career and more">
+            </div>
+            <div>
+                <button class="btn" onclick="login()"> Login</button>
+                <button class="btn" onclick="account()">Signup</button>
+            </div>
+        </ul>
+    </div>
+    <div class="maincon">
+        <div class="container1">
+            
+            <h1>Do submit your suggestions to help us improve</h1>
+            <br><br>
+            <form action="">
+                <label for="name">First Name</label>&nbsp;<input type="text" placeholder="Enter your first name">
+                 <br><br>
+                <label for="name">Last Name</label>&nbsp;<input type="text" placeholder="Enter your last name">
+                 <br><br>
+                 <label for="mail">Email</label>&nbsp;<input type="email" placeholder="Enter your mail">
+                 <br><br>
+                 <label for="message">Message</label>&nbsp;
+                 <textarea name="message">Your message</textarea>
+                 <br><br>
+                 <label for="description">Description</label>&nbsp;
+                 <textarea name="" id="" cols="40" rows="6">Describe your query</textarea>
+                 <br><br>
+                 <input class="btn" type="submit">
+            </form>
+            <br><br><br><br>
+        </div>
+        <div class="container2">
+            
+            <h1>You can Contact us for suggestions and querries</h1>
+            <br><br>
+            <h3>Contact us on our social media handels</h3>
+            <br>
+            <li>Facebook:bookself@acebook.com</li>
+            <li>Instagram:bookself_edcate</li>
+            <li>Twitter:Bookself_007</li>
+            <li>Gmail:bookself.ed.@gmail.in</li><br><br>
+            <h3>Contact us on call</h3>
+            <br>
+            <li>Tollfree number:18001801551</li>
+            <li>Mobile:9411525847</li>
+            <li>Fax:263645222654</li>
+            <li>Landline:263645222568</li>
+           <br><br>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; Bookself Pvt. Ltd.</p>
+        <p>contact us for more details</p>
+        <br><br>
+    </div>
+    <script>
+        function go() {
+            alert("Serach modeule is comming soon");
+        }
+        function login() {
+            window.location.href = "login.html";
+        }
+
+        function account() {
+            window.location.href = "createaccount.html";
+        }
+    </script>
+</body>
+
+</html>

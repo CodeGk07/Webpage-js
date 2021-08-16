@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookself</title>
+    <style>
+        body {
+            background-image: url(main.jpg);
+            background-size: 1200px;
+        }
+
+        .container2 {
+            position: absolute;
+            top: 25%;
+            right: 37%;
+            background-color: darkolivegreen;
+            text-align: center;
+            padding: 10px;
+            height: 300px;
+            width: 300px;
+            display: none;
+        }
+
+        .container {
+            background-image: url(mid.jpg);
+            background-size: 300px;
+            height: 400px;
+            width: 350px;
+            margin: 5px;
+            padding: 5px;
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            right: 35%;
+            box-shadow: 2px 2px 5px 5px saddlebrown;
+
+        }
+
+        .container:hover {
+            padding-top: 23px;
+        }
+
+        #btn2 {
+            padding: 4px;
+            border-radius: 7px;
+            cursor: pointer;
+            background-color: rgb(28, 83, 28);
+            color: white;
+            width: 100px;
+        }
+
+        #btn {
+            padding: 4px;
+            border-radius: 7px;
+            cursor: pointer;
+            background-color: rgb(28, 83, 28);
+            color: white;
+            width: 50px;
+        }
+
+        #btn:hover {
+            background-color: darkorange;
+        }
+
+        #btn:active {
+            background-color: darkred;
+        }
+
+        .text {
+            font-family: cursive;
+            color: white;
+        }
+
+        .header {
+            font-family: monospace;
+            font-size: 20px;
+            color: white;
+
+        }
+
+        .input {
+            text-align: center;
+        }
+
+        .link {
+            color: olive;
+            ;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: red
+        }
+        .navitem {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+
+        .btn {
+            padding: 4px;
+            border-radius: 7px;
+            cursor: pointer;
+            background-color: rgb(28, 83, 28);
+            color: white;
+            width: 55px;
+        }
+
+        .btn:hover {
+            background-color: darkorange;
+        }
+
+        .btn:active {
+            background-color: darkred;
+        }
+
+        #search {
+            width: 280px;
+            height: 30px;
+        }
+
+        #simg {
+            width: 30px;
+            ;
+            position: absolute;
+            cursor: pointer;
+            top: 1;
+            right: 16%;
+        }
+
+        a:link {
+            text-decoration: none;
+            color:teal;
+        }
+
+        a:hover {
+            color: royalblue;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        a:visited {
+            color: springgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="navitem">
+            <div>
+                <li><a href="">
+                        Bookself
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="webpage.html">
+                        Home
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="about.html">
+                        About
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="edu.html">
+                        Educational content
+                    </a></li>
+            </div>
+            <div>
+                <li><a href="Contact.html">
+                        Contact us
+                    </a></li>
+            </div>
+            <div>
+                <a onclick="go()" href=""><img id="simg" src="search.png" width="50px" height="30px"></a>
+                <input type="search" id="search" placeholder="Serach for books,career and more">
+            </div>
+            <div>
+                <button class="btn" onclick="login1()"> Login</button>
+                <button class="btn" onclick="account()">Signup</button>
+            </div>
+        </ul>
+    </div>
+    <div class="container">
+        <h2 class="header">Login to get started</h2>
+        <br><br>
+        &nbsp;&nbsp;<label class="text" for="mail">username</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
+            class="input email" type="text" placeholder="Enter your username">
+        <br><br>
+        <label class="text" for="password">Password</label>&nbsp;&nbsp; <input class="input password" type="password"
+            placeholder="Enter your password">
+        <br><br>
+        <button id="btn" onclick="login()">Login</button>
+        <br><br><br>
+        <a href="createaccount.html" class="link">Create new account</a>
+        <br><br>
+        <a href="forgotpassword.html" class="link">Forgot password</a>
+    </div>
+
+    <div class="container2">
+        <img src="dead.ico" alt="" width="60px">
+        <br>
+        <h2>Incorrect username or password</h2>
+        <br>
+        <button id="btn2" onclick="tryagain()">Try Again</button>
+    </div>
+
+    <script>
+
+      
+
+        function login() {
+            let mail = document.querySelector('.email').value;
+            document.querySelector('.email').value=""
+            let password = document.querySelector('.password').value;
+            document.querySelector('.password').value=""
+
+            if (mail == "Gaurav" && password == "1997") {
+                alert("You have successfully logged in")
+                window.location.href = "webpage.html";
+            }
+            else {
+                let a = document.querySelector('.container2');
+                a.style.display = "block";
+            }
+        }
+        function tryagain() {
+            let a = document.querySelector('.container2');
+            a.style.display = "none";
+        }
+        function go() {
+            alert("Serach modeule is comming soon");
+        }
+        function login1() {
+            window.location.href = "login.html";
+        }
+
+        function account() {
+            window.location.href = "createaccount.html";
+        }
+    </script>
+</body>
+
+</html>
